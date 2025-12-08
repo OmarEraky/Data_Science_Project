@@ -1,0 +1,516 @@
+Customer ID,Year,Quarter,Survey Date,Response Date,How likely are you to recommend insider to a friend or colleague ,How would you rate the value you gain from our company,How frequently are you using our platform,Please rate the overall quality of our products,Please rate the usability of the panel,Please rate your understanding of our reporting capabilities in the panel
+CUS-1516050,2022,3,2022-07-01,2022-08-26,10,5,Once a Month,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1516050,2022,3,2022-07-01,2022-09-27,10,5,Once a Month,5,5.0,I don't use it often
+CUS-1470950,2022,1,2022-01-01,2022-03-25,4,3,Once a Day,2,3.0,I need someone from Insider team to provide me the report from the panel
+CUS-1470950,2022,3,2022-07-01,2022-09-30,6,3,Once a Week,4,4.0,I tried but could not find everything I need
+CUS-1470950,2022,2,2022-04-01,2022-06-23,10,5,Once a Day,4,3.0,I need someone from Insider team to provide me the report from the panel
+CUS-1470950,2022,1,2022-01-01,2022-03-28,7,4,Once a Day,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-1470950,2022,1,2022-01-01,2022-03-28,9,5,Once a Week,5,5.0,I am able to report everything easily
+CUS-1470950,2022,3,2022-07-01,2022-08-05,8,4,Once a Week,4,4.0,I tried but could not find everything I need
+CUS-1506400,2022,3,2022-07-01,2022-09-27,9,5,Once a Week,5,3.0,"I can pull all the numbers, but don't understand them"
+CUS-1506400,2022,3,2022-07-01,2022-09-27,10,5,Once a Week,4,3.0,I tried but could not find everything I need
+CUS-154400,2022,1,2022-01-01,2022-03-30,9,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-154400,2022,1,2022-01-01,2022-03-30,9,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-154400,2022,2,2022-04-01,2022-05-06,9,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-154400,2022,3,2022-07-01,2022-09-06,4,4,Once a Day,4,4.0,I am able to report everything easily
+CUS-1172550,2022,2,2022-04-01,2022-06-23,8,4,Once a Week,4,4.0,I don't use it often
+CUS-1172550,2022,2,2022-04-01,2022-06-29,9,4,Once a Week,5,4.0,I am able to report everything easily
+CUS-1172550,2022,2,2022-04-01,2022-06-27,10,5,Once a Week,4,5.0,"I can pull all the numbers, but don't understand them"
+CUS-1364800,2022,2,2022-04-01,2022-06-29,10,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-355050,2022,2,2022-04-01,2022-04-12,5,4,Once a Day,4,4.0,"I can pull all the numbers, but don't understand them"
+CUS-355050,2022,3,2022-07-01,2022-09-20,7,3,Once a Day,3,4.0,I tried but could not find everything I need
+CUS-156400,2022,2,2022-04-01,2022-05-20,9,5,Once a Day,5,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-165900,2022,1,2022-01-01,2022-02-01,10,3,Once a Day,5,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-165900,2022,1,2022-01-01,2022-03-28,10,5,Once a Week,5,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-165900,2022,2,2022-04-01,2022-05-20,10,4,Once a Week,5,4.0,I don't use it often
+CUS-165900,2022,3,2022-07-01,2022-09-19,10,5,Once a Day,5,5.0,I don't use it often
+CUS-835900,2022,3,2022-07-01,2022-09-26,10,5,Once a Day,4,4.0,I don't use it often
+CUS-835900,2022,2,2022-04-01,2022-06-20,7,4,Once a Day,4,2.0,I don't use it often
+CUS-835900,2022,3,2022-07-01,2022-08-23,7,4,Once a Day,4,2.0,I need someone from Insider team to provide me the report from the panel
+CUS-1492900,2022,1,2022-01-01,2022-03-30,10,5,Once a Month,5,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-1492900,2022,2,2022-04-01,2022-06-17,9,4,Once a Day,4,3.0,"I can pull all the numbers, but don't understand them"
+CUS-335250,2022,1,2022-01-01,2022-02-01,10,5,Once a Week,5,4.0,I am able to report everything easily
+CUS-335250,2022,1,2022-01-01,2022-03-21,10,5,Once a Week,5,4.0,I am able to report everything easily
+CUS-690000,2022,1,2022-01-01,2022-02-01,8,3,Once a Month,4,2.0,I am able to report everything easily
+CUS-690000,2022,2,2022-04-01,2022-06-17,9,5,Once a Month,4,3.0,I am able to report everything easily
+CUS-690000,2022,3,2022-07-01,2022-09-06,8,4,Once a Month,4,3.0,I am able to report everything easily
+CUS-1489700,2022,1,2022-01-01,2022-03-21,9,4,Once a Day,4,3.0,I need someone from Insider team to provide me the report from the panel
+CUS-159150,2022,2,2022-04-01,2022-04-16,7,4,Once a Day,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-159150,2022,3,2022-07-01,2022-09-11,8,4,Once a Day,4,3.0,I need someone from Insider team to provide me the report from the panel
+CUS-159150,2022,2,2022-04-01,2022-04-01,9,5,Once a Day,5,4.0,I tried but could not find everything I need
+CUS-159150,2022,3,2022-07-01,2022-09-27,9,5,Once a Day,5,5.0,I tried but could not find everything I need
+CUS-706750,2022,3,2022-07-01,2022-09-12,7,4,Once a Day,4,5.0,I am able to report everything easily
+CUS-706750,2022,3,2022-07-01,2022-09-30,8,4,Once a Week,4,5.0,I am able to report everything easily
+CUS-387200,2022,3,2022-07-01,2022-09-29,10,5,Once a Week,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-387200,2022,1,2022-01-01,2022-03-29,9,5,Once a Day,5,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-1079000,2022,1,2022-01-01,2022-03-29,8,4,Once a Day,4,4.0,I am able to report everything easily
+CUS-1079000,2022,2,2022-04-01,2022-06-07,10,5,Once a Day,5,5.0,I tried but could not find everything I need
+CUS-1079000,2022,3,2022-07-01,2022-08-24,10,5,Once a Day,5,5.0,I tried but could not find everything I need
+CUS-1079000,2022,1,2022-01-01,2022-03-23,8,4,Once a Week,3,3.0,I tried but could not find everything I need
+CUS-1079000,2022,2,2022-04-01,2022-06-27,8,4,Once a Day,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-1079000,2022,3,2022-07-01,2022-08-30,9,4,Once a Day,4,4.0,I tried but could not find everything I need
+CUS-1516450,2022,3,2022-07-01,2022-09-20,8,4,Once a Month,4,4.0,I don't use it often
+CUS-1516450,2022,1,2022-01-01,2022-03-01,10,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-1516450,2022,3,2022-07-01,2022-09-02,10,5,Once a Week,4,4.0,I am able to report everything easily
+CUS-1043250,2022,2,2022-04-01,2022-06-30,10,5,Once a Week,4,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-927800,2022,2,2022-04-01,2022-05-26,7,4,Once a Day,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-927800,2022,3,2022-07-01,2022-09-05,5,3,Once a Day,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-927800,2022,2,2022-04-01,2022-06-07,7,4,Once a Day,4,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-547850,2022,3,2022-07-01,2022-09-15,10,5,Once a Month,5,5.0,I don't use it often
+CUS-163250,2022,3,2022-07-01,2022-09-08,9,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-1531900,2022,3,2022-07-01,2022-09-05,10,5,Once a Week,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1479450,2022,3,2022-07-01,2022-09-05,9,4,Once a Day,4,4.0,I am able to report everything easily
+CUS-1493400,2022,1,2022-01-01,2022-03-01,8,5,Once a Day,5,3.0,I am able to report everything easily
+CUS-1493400,2022,1,2022-01-01,2022-03-21,8,5,Once a Day,5,3.0,I am able to report everything easily
+CUS-1493400,2022,2,2022-04-01,2022-06-07,2,2,Once a Week,2,5.0,I am able to report everything easily
+CUS-1493400,2022,3,2022-07-01,2022-08-03,8,4,Once a Week,5,5.0,I am able to report everything easily
+CUS-1493400,2022,2,2022-04-01,2022-06-14,6,3,Once a Month,3,4.0,I tried but could not find everything I need
+CUS-1493400,2022,3,2022-07-01,2022-08-19,8,4,Once a Month,4,4.0,I am able to report everything easily
+CUS-1479200,2022,3,2022-07-01,2022-09-06,5,4,Once a Month,3,4.0,I am able to report everything easily
+CUS-558200,2022,1,2022-01-01,2022-03-01,8,4,Once a Day,4,3.0,I am able to report everything easily
+CUS-558200,2022,1,2022-01-01,2022-03-21,8,4,Once a Day,4,3.0,I am able to report everything easily
+CUS-558200,2022,2,2022-04-01,2022-06-24,7,4,Once a Day,3,3.0,I am able to report everything easily
+CUS-558200,2022,3,2022-07-01,2022-09-30,7,3,Once a Day,3,3.0,I am able to report everything easily
+CUS-1456650,2022,2,2022-04-01,2022-06-06,8,4,Once a Week,4,4.0,I don't use it often
+CUS-1456650,2022,3,2022-07-01,2022-09-19,8,4,Once a Week,4,4.0,I am able to report everything easily
+CUS-1456650,2022,1,2022-01-01,2022-03-01,9,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-1456650,2022,1,2022-01-01,2022-03-21,9,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-1456650,2022,2,2022-04-01,2022-06-06,7,5,Once a Week,4,4.0,I am able to report everything easily
+CUS-1456650,2022,3,2022-07-01,2022-08-27,8,5,Once a Day,3,5.0,I am able to report everything easily
+CUS-1456650,2022,2,2022-04-01,2022-06-06,8,5,Once a Week,5,5.0,I am able to report everything easily
+CUS-927200,2022,3,2022-07-01,2022-08-30,9,4,Once a Day,4,4.0,I don't use it often
+CUS-927200,2022,2,2022-04-01,2022-06-24,7,3,Once a Day,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-927200,2022,3,2022-07-01,2022-09-26,7,4,Once a Day,4,5.0,I am able to report everything easily
+CUS-927200,2022,3,2022-07-01,2022-09-22,7,3,Once a Day,3,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-927200,2022,2,2022-04-01,2022-06-23,8,4,Once a Day,4,4.0,I tried but could not find everything I need
+CUS-927200,2022,3,2022-07-01,2022-09-21,8,4,Once a Day,4,4.0,I tried but could not find everything I need
+CUS-1446750,2022,3,2022-07-01,2022-09-22,9,5,Once a Week,4,5.0,I don't use it often
+CUS-1446750,2022,2,2022-04-01,2022-06-28,10,5,Once a Day,4,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1446750,2022,3,2022-07-01,2022-08-31,10,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-153300,2022,3,2022-07-01,2022-08-18,10,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-153300,2022,2,2022-04-01,2022-06-16,10,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-153300,2022,3,2022-07-01,2022-08-18,10,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-153300,2022,1,2022-01-01,2022-03-23,9,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-670600,2022,2,2022-04-01,2022-04-01,8,4,Once a Week,4,4.0,"I can pull all the numbers, but don't understand them"
+CUS-670600,2022,3,2022-07-01,2022-09-05,8,4,Once a Week,4,4.0,I am able to report everything easily
+CUS-670600,2022,2,2022-04-01,2022-06-16,7,4,Once a Day,4,4.0,I am able to report everything easily
+CUS-670600,2022,1,2022-01-01,2022-03-01,7,4,Once a Day,4,4.0,I don't use it often
+CUS-670600,2022,2,2022-04-01,2022-06-28,7,4,Once a Day,4,4.0,I am able to report everything easily
+CUS-670600,2022,3,2022-07-01,2022-09-02,6,3,Once a Week,4,4.0,I am able to report everything easily
+CUS-941800,2022,2,2022-04-01,2022-06-23,7,5,Once a Week,4,3.0,I don't use it often
+CUS-941800,2022,3,2022-07-01,2022-09-23,7,5,Once a Day,5,4.0,I am able to report everything easily
+CUS-941800,2022,3,2022-07-01,2022-09-23,8,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-1478350,2022,2,2022-04-01,2022-05-26,8,5,Once a Day,4,3.0,I need someone from Insider team to provide me the report from the panel
+CUS-1478350,2022,3,2022-07-01,2022-08-31,8,5,Once a Day,4,2.0,I tried but could not find everything I need
+CUS-1478350,2022,1,2022-01-01,2022-03-31,7,5,Once a Day,5,4.0,I don't use it often
+CUS-1478350,2022,3,2022-07-01,2022-08-31,8,4,Once a Day,4,3.0,"I can pull all the numbers, but don't understand them"
+CUS-1478350,2022,3,2022-07-01,2022-09-07,7,4,Once a Day,4,3.0,"I can pull all the numbers, but don't understand them"
+CUS-1458300,2022,1,2022-01-01,2022-02-01,8,4,Once a Week,4,4.0,"I can pull all the numbers, but don't understand them"
+CUS-1458300,2022,1,2022-01-01,2022-03-21,8,4,Once a Week,4,4.0,"I can pull all the numbers, but don't understand them"
+CUS-1458300,2022,3,2022-07-01,2022-09-09,8,4,Once a Week,4,4.0,"I can pull all the numbers, but don't understand them"
+CUS-303900,2022,1,2022-01-01,2022-02-01,9,5,Once a Week,5,4.0,I am able to report everything easily
+CUS-303900,2022,2,2022-04-01,2022-06-09,9,4,Once a Day,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-303900,2022,1,2022-01-01,2022-03-30,8,4,Once a Day,4,4.0,I don't use it often
+CUS-303900,2022,2,2022-04-01,2022-05-05,8,4,Once a Week,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-303900,2022,3,2022-07-01,2022-07-05,8,4,Once a Month,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-303900,2022,3,2022-07-01,2022-09-06,8,4,Once a Week,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-155550,2022,2,2022-04-01,2022-06-28,9,5,Once a Day,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-1503600,2022,1,2022-01-01,2022-02-01,6,3,Once a Month,3,3.0,"I can pull all the numbers, but don't understand them"
+CUS-1492550,2022,1,2022-01-01,2022-03-31,8,5,Once a Week,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-1517500,2022,1,2022-01-01,2022-02-01,7,4,Once a Week,5,,I am able to report everything easily
+CUS-1517500,2022,2,2022-04-01,2022-04-05,8,4,Once a Week,4,5.0,I am able to report everything easily
+CUS-1517500,2022,3,2022-07-01,2022-09-05,7,4,Once a Week,4,5.0,I am able to report everything easily
+CUS-618050,2022,2,2022-04-01,2022-05-17,0,1,Once a Day,1,1.0,I need someone from Insider team to provide me the report from the panel
+CUS-618050,2022,3,2022-07-01,2022-07-05,0,1,Once a Day,1,1.0,I need someone from Insider team to provide me the report from the panel
+CUS-618050,2022,1,2022-01-01,2022-02-01,5,3,Once a Day,3,,I don't use it often
+CUS-1293200,2022,2,2022-04-01,2022-06-28,8,4,Once a Month,4,4.0,I don't use it often
+CUS-1447100,2022,3,2022-07-01,2022-09-27,10,5,Once a Month,5,5.0,I am able to report everything easily
+CUS-1447100,2022,3,2022-07-01,2022-09-27,10,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-547500,2022,3,2022-07-01,2022-08-29,9,5,Once a Week,5,5.0,I don't use it often
+CUS-1516700,2022,3,2022-07-01,2022-09-30,8,4,Once a Week,5,4.0,I am able to report everything easily
+CUS-1484950,2022,3,2022-07-01,2022-09-08,8,4,Once a Week,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-1484950,2022,1,2022-01-01,2022-03-21,9,4,Once a Week,5,3.0,I need someone from Insider team to provide me the report from the panel
+CUS-615050,2022,3,2022-07-01,2022-09-09,10,5,Once a Week,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-782950,2022,2,2022-04-01,2022-06-22,8,3,Once a Month,4,4.0,"I can pull all the numbers, but don't understand them"
+CUS-547500,2022,1,2022-01-01,2022-03-21,9,4,Once a Week,4,4.0,I am able to report everything easily
+CUS-547500,2022,1,2022-01-01,2022-03-31,6,3,Once a Day,3,3.0,I tried but could not find everything I need
+CUS-908900,2022,2,2022-04-01,2022-06-10,10,5,Once a Week,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-1485750,2022,2,2022-04-01,2022-06-21,10,5,Once a Month,5,4.0,I don't use it often
+CUS-1485850,2022,2,2022-04-01,2022-06-21,9,5,Once a Month,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-305050,2022,1,2022-01-01,2022-03-31,8,5,Once a Week,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-305050,2022,3,2022-07-01,2022-09-30,8,5,Once a Week,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-305050,2022,2,2022-04-01,2022-06-23,8,4,Once a Week,4,5.0,I am able to report everything easily
+CUS-305050,2022,2,2022-04-01,2022-04-19,7,3,Once a Month,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-305050,2022,2,2022-04-01,2022-06-26,6,3,Once a Month,3,3.0,I tried but could not find everything I need
+CUS-1489950,2022,1,2022-01-01,2022-03-21,7,3,Once a Week,3,3.0,I tried but could not find everything I need
+CUS-1489950,2022,1,2022-01-01,2022-03-01,5,3,Once a Week,3,2.0,"I can pull all the numbers, but don't understand them"
+CUS-1489950,2022,1,2022-01-01,2022-03-21,5,3,Once a Week,3,2.0,"I can pull all the numbers, but don't understand them"
+CUS-1489950,2022,2,2022-04-01,2022-05-02,5,3,Once a Week,3,2.0,I tried but could not find everything I need
+CUS-1507250,2022,3,2022-07-01,2022-09-02,9,4,Once a Week,4,3.0,I don't use it often
+CUS-1507250,2022,1,2022-01-01,2022-03-01,8,5,Once a Month,5,,I am able to report everything easily
+CUS-1522100,2022,3,2022-07-01,2022-08-09,10,4,Once a Week,4,4.0,I tried but could not find everything I need
+CUS-1495950,2022,3,2022-07-01,2022-09-13,10,5,Once a Week,5,4.0,I am able to report everything easily
+CUS-788700,2022,3,2022-07-01,2022-08-17,9,5,Once a Day,5,5.0,"I can pull all the numbers, but don't understand them"
+CUS-1487800,2022,1,2022-01-01,2022-03-01,10,5,Once a Week,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1487800,2022,1,2022-01-01,2022-03-21,10,5,Once a Week,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1487800,2022,3,2022-07-01,2022-08-15,8,4,Once a Week,3,3.0,"I can pull all the numbers, but don't understand them"
+CUS-1487800,2022,2,2022-04-01,2022-06-22,7,4,Once a Week,4,4.0,I am able to report everything easily
+CUS-1487800,2022,3,2022-07-01,2022-08-25,8,4,Once a Week,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-1553850,2022,3,2022-07-01,2022-09-07,8,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-782950,2022,1,2022-01-01,2022-03-01,7,4,Once a Week,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-782950,2022,1,2022-01-01,2022-03-21,7,4,Once a Week,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-1476350,2022,3,2022-07-01,2022-09-26,8,4,Once a Day,4,5.0,I am able to report everything easily
+CUS-1466600,2022,2,2022-04-01,2022-06-22,9,5,Once a Day,4,4.0,I am able to report everything easily
+CUS-1466600,2022,1,2022-01-01,2022-03-21,10,5,Once a Week,5,5.0,I am able to report everything easily
+CUS-1466600,2022,2,2022-04-01,2022-06-07,10,5,Once a Week,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1466600,2022,3,2022-07-01,2022-08-24,10,5,Once a Week,5,5.0,I tried but could not find everything I need
+CUS-1466600,2022,1,2022-01-01,2022-03-01,10,5,Once a Week,5,5.0,I am able to report everything easily
+CUS-238550,2022,1,2022-01-01,2022-02-01,8,4,Once a Day,4,4.0,I am able to report everything easily
+CUS-238550,2022,1,2022-01-01,2022-03-21,8,4,Once a Day,4,4.0,I am able to report everything easily
+CUS-735850,2022,1,2022-01-01,2022-02-01,8,5,Once a Week,4,3.0,I tried but could not find everything I need
+CUS-735850,2022,2,2022-04-01,2022-05-20,10,5,Once a Week,5,4.0,I tried but could not find everything I need
+CUS-735850,2022,3,2022-07-01,2022-09-23,10,5,Once a Month,4,4.0,I am able to report everything easily
+CUS-1467200,2022,1,2022-01-01,2022-03-01,8,4,Once a Week,4,,I need someone from Insider team to provide me the report from the panel
+CUS-1467200,2022,1,2022-01-01,2022-03-21,8,4,Once a Week,4,,I need someone from Insider team to provide me the report from the panel
+CUS-763850,2022,2,2022-04-01,2022-06-20,7,4,Once a Week,3,3.0,I am able to report everything easily
+CUS-763850,2022,3,2022-07-01,2022-09-20,9,5,Once a Week,5,5.0,I don't use it often
+CUS-763850,2022,3,2022-07-01,2022-07-05,7,4,Once a Week,3,3.0,I am able to report everything easily
+CUS-763850,2022,3,2022-07-01,2022-08-07,7,4,Once a Week,4,3.0,I am able to report everything easily
+CUS-763850,2022,3,2022-07-01,2022-09-05,5,2,Once a Week,3,3.0,I am able to report everything easily
+CUS-1454200,2022,2,2022-04-01,2022-06-30,10,5,Once a Week,4,4.0,I don't use it often
+CUS-1454200,2022,2,2022-04-01,2022-06-30,9,5,Once a Month,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1493800,2022,2,2022-04-01,2022-06-08,7,4,Once a Week,4,4.0,I tried but could not find everything I need
+CUS-1526350,2022,3,2022-07-01,2022-09-27,6,4,Once a Week,3,3.0,I don't use it often
+CUS-511950,2022,2,2022-04-01,2022-06-30,9,5,Once a Day,4,4.0,I tried but could not find everything I need
+CUS-511950,2022,3,2022-07-01,2022-09-29,8,4,Once a Day,4,4.0,I am able to report everything easily
+CUS-879750,2022,2,2022-04-01,2022-06-28,10,5,Once a Week,5,5.0,I tried but could not find everything I need
+CUS-879750,2022,2,2022-04-01,2022-06-28,10,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-879750,2022,3,2022-07-01,2022-08-31,9,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-280750,2022,2,2022-04-01,2022-06-21,3,3,Once a Week,4,4.0,I am able to report everything easily
+CUS-280750,2022,3,2022-07-01,2022-09-27,2,1,Once a Day,4,2.0,I am able to report everything easily
+CUS-280750,2022,1,2022-01-01,2022-03-31,8,5,Once a Day,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-280750,2022,3,2022-07-01,2022-09-30,5,3,Once a Week,3,2.0,"I can pull all the numbers, but don't understand them"
+CUS-1486300,2022,1,2022-01-01,2022-02-01,10,5,Once a Week,4,3.0,I tried but could not find everything I need
+CUS-1486300,2022,2,2022-04-01,2022-05-23,7,3,Once a Week,3,4.0,I am able to report everything easily
+CUS-1486300,2022,3,2022-07-01,2022-09-20,10,1,Once a Month,3,3.0,I am able to report everything easily
+CUS-1461500,2022,2,2022-04-01,2022-06-08,8,5,Once a Day,4,5.0,I don't use it often
+CUS-1461500,2022,2,2022-04-01,2022-05-23,8,3,Once a Day,4,4.0,I tried but could not find everything I need
+CUS-1461500,2022,3,2022-07-01,2022-07-30,8,3,Once a Day,4,3.0,I tried but could not find everything I need
+CUS-271600,2022,1,2022-01-01,2022-03-01,10,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-271600,2022,1,2022-01-01,2022-02-01,10,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-1444750,2022,1,2022-01-01,2022-03-21,8,4,Once a Week,5,5.0,I am able to report everything easily
+CUS-1444750,2022,3,2022-07-01,2022-07-05,8,5,Once a Week,5,5.0,I tried but could not find everything I need
+CUS-1444750,2022,3,2022-07-01,2022-08-08,8,5,Once a Week,5,5.0,I am able to report everything easily
+CUS-999900,2022,3,2022-07-01,2022-09-30,8,4,Once a Day,4,5.0,I am able to report everything easily
+CUS-999900,2022,2,2022-04-01,2022-06-29,8,3,Once a Day,4,4.0,I tried but could not find everything I need
+CUS-998800,2022,1,2022-01-01,2022-02-01,9,4,Once a Week,4,,I tried but could not find everything I need
+CUS-998800,2022,1,2022-01-01,2022-03-01,8,4,Once a Day,3,3.0,I am able to report everything easily
+CUS-998800,2022,3,2022-07-01,2022-07-05,8,4,Once a Week,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-1493200,2022,1,2022-01-01,2022-03-22,7,2,Once a Week,3,,"I can pull all the numbers, but don't understand them"
+CUS-1493200,2022,1,2022-01-01,2022-03-31,6,3,Once a Day,3,3.0,I tried but could not find everything I need
+CUS-1495700,2022,1,2022-01-01,2022-03-30,6,3,Once a Day,2,3.0,I tried but could not find everything I need
+CUS-1466450,2022,2,2022-04-01,2022-06-28,10,5,Once a Week,5,4.0,I am able to report everything easily
+CUS-1466450,2022,1,2022-01-01,2022-03-30,10,5,Once a Week,5,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-1466450,2022,3,2022-07-01,2022-09-05,10,5,Once a Month,5,4.0,I tried but could not find everything I need
+CUS-1536250,2022,3,2022-07-01,2022-08-16,8,5,Once a Day,4,4.0,I don't use it often
+CUS-1536250,2022,2,2022-04-01,2022-05-30,10,5,Once a Week,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-229950,2022,1,2022-01-01,2022-03-01,8,4,Once a Week,4,4.0,I am able to report everything easily
+CUS-229950,2022,1,2022-01-01,2022-03-21,8,4,Once a Week,4,4.0,I am able to report everything easily
+CUS-1100500,2022,3,2022-07-01,2022-09-05,6,3,Once a Day,3,2.0,I don't use it often
+CUS-1435450,2022,2,2022-04-01,2022-04-18,8,4,Once a Day,4,4.0,I am able to report everything easily
+CUS-1435450,2022,3,2022-07-01,2022-07-29,8,4,Once a Day,4,5.0,I am able to report everything easily
+CUS-1435450,2022,2,2022-04-01,2022-05-23,9,5,Once a Day,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1435450,2022,3,2022-07-01,2022-09-14,7,4,Once a Day,4,4.0,I tried but could not find everything I need
+CUS-1435450,2022,1,2022-01-01,2022-02-01,9,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-1435450,2022,1,2022-01-01,2022-03-21,9,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-1435450,2022,1,2022-01-01,2022-03-01,10,5,Once a Day,5,,I am able to report everything easily
+CUS-1435450,2022,1,2022-01-01,2022-03-21,10,5,Once a Day,5,,I am able to report everything easily
+CUS-1473700,2022,1,2022-01-01,2022-03-01,7,4,Once a Day,4,4.0,I am able to report everything easily
+CUS-1473700,2022,1,2022-01-01,2022-03-21,7,4,Once a Day,4,4.0,I am able to report everything easily
+CUS-1473700,2022,2,2022-04-01,2022-06-08,6,4,Once a Day,4,3.0,I don't use it often
+CUS-1473700,2022,3,2022-07-01,2022-09-23,7,4,Once a Day,4,4.0,I don't use it often
+CUS-1473700,2022,1,2022-01-01,2022-03-01,9,4,Once a Week,4,4.0,I don't use it often
+CUS-1473700,2022,1,2022-01-01,2022-03-21,9,4,Once a Week,4,4.0,I don't use it often
+CUS-1473700,2022,2,2022-04-01,2022-06-27,5,3,Once a Day,3,3.0,I don't use it often
+CUS-1473700,2022,3,2022-07-01,2022-09-22,8,4,Once a Day,4,4.0,I don't use it often
+CUS-1473700,2022,2,2022-04-01,2022-06-08,8,4,Once a Week,4,4.0,I am able to report everything easily
+CUS-1473700,2022,3,2022-07-01,2022-07-14,3,2,Once a Week,4,3.0,I don't use it often
+CUS-1511350,2022,3,2022-07-01,2022-08-05,10,4,Once a Day,4,4.0,I don't use it often
+CUS-1511350,2022,3,2022-07-01,2022-08-08,6,4,Once a Day,4,3.0,"I can pull all the numbers, but don't understand them"
+CUS-1500650,2022,2,2022-04-01,2022-06-17,7,4,Once a Month,4,5.0,I don't use it often
+CUS-1500650,2022,3,2022-07-01,2022-09-29,10,5,Once a Day,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1500650,2022,2,2022-04-01,2022-06-17,10,5,Once a Week,5,5.0,I tried but could not find everything I need
+CUS-1500650,2022,2,2022-04-01,2022-04-01,9,5,Once a Day,5,4.0,I tried but could not find everything I need
+CUS-1500650,2022,3,2022-07-01,2022-09-27,9,5,Once a Day,5,5.0,I tried but could not find everything I need
+CUS-1030300,2022,1,2022-01-01,2022-03-01,10,3,Once a Day,3,5.0,I am able to report everything easily
+CUS-1030300,2022,1,2022-01-01,2022-03-21,10,3,Once a Day,3,5.0,I am able to report everything easily
+CUS-1030300,2022,3,2022-07-01,2022-08-29,10,3,Once a Week,4,5.0,"I can pull all the numbers, but don't understand them"
+CUS-1030300,2022,1,2022-01-01,2022-03-18,8,4,Once a Month,4,,I don't use it often
+CUS-1030300,2022,1,2022-01-01,2022-03-21,8,4,Once a Month,4,,I don't use it often
+CUS-1030300,2022,3,2022-07-01,2022-08-29,8,5,Once a Week,4,5.0,I don't use it often
+CUS-1489750,2022,3,2022-07-01,2022-09-05,0,1,Once a Month,1,2.0,I tried but could not find everything I need
+CUS-1489750,2022,1,2022-01-01,2022-03-01,10,4,Once a Week,4,3.0,I don't use it often
+CUS-1489750,2022,1,2022-01-01,2022-02-01,10,5,Once a Week,5,,I am able to report everything easily
+CUS-1489750,2022,3,2022-07-01,2022-09-05,10,4,Once a Day,5,4.0,"I can pull all the numbers, but don't understand them"
+CUS-1489750,2022,2,2022-04-01,2022-06-06,9,4,Once a Day,4,3.0,I tried but could not find everything I need
+CUS-1262600,2022,1,2022-01-01,2022-03-01,8,5,Once a Week,5,,I tried but could not find everything I need
+CUS-1262600,2022,2,2022-04-01,2022-05-22,9,5,Once a Week,4,3.0,I am able to report everything easily
+CUS-1262600,2022,3,2022-07-01,2022-08-23,9,5,Once a Month,5,3.0,I am able to report everything easily
+CUS-1262600,2022,3,2022-07-01,2022-08-23,10,5,Once a Month,5,4.0,I don't use it often
+CUS-1262600,2022,3,2022-07-01,2022-09-21,10,5,Once a Month,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1452700,2022,1,2022-01-01,2022-03-28,8,4,Once a Day,4,4.0,I tried but could not find everything I need
+CUS-1494650,2022,2,2022-04-01,2022-06-21,9,4,Once a Day,4,4.0,I am able to report everything easily
+CUS-703000,2022,2,2022-04-01,2022-06-23,8,4,Once a Month,4,4.0,I am able to report everything easily
+CUS-1447700,2022,1,2022-01-01,2022-03-31,8,5,Once a Day,4,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1447700,2022,2,2022-04-01,2022-06-13,10,5,Once a Day,5,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-1447700,2022,2,2022-04-01,2022-06-10,10,5,Once a Week,4,5.0,"I can pull all the numbers, but don't understand them"
+CUS-467000,2022,3,2022-07-01,2022-08-30,8,4,Once a Week,4,4.0,I am able to report everything easily
+CUS-467000,2022,2,2022-04-01,2022-04-18,8,3,Once a Month,4,3.0,I need someone from Insider team to provide me the report from the panel
+CUS-467000,2022,3,2022-07-01,2022-08-30,7,3,Once a Month,4,3.0,I need someone from Insider team to provide me the report from the panel
+CUS-1455250,2022,1,2022-01-01,2022-03-01,10,5,Once a Day,5,5.0,"I can pull all the numbers, but don't understand them"
+CUS-1455250,2022,2,2022-04-01,2022-04-18,10,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-1455250,2022,1,2022-01-01,2022-02-01,10,5,Once a Day,0,,"I can pull all the numbers, but don't understand them"
+CUS-1455250,2022,2,2022-04-01,2022-06-10,10,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-606600,2022,3,2022-07-01,2022-09-13,8,4,Once a Day,4,4.0,"I can pull all the numbers, but don't understand them"
+CUS-793100,2022,1,2022-01-01,2022-02-01,8,5,Once a Week,4,,I am able to report everything easily
+CUS-793100,2022,2,2022-04-01,2022-06-20,9,5,Once a Week,4,5.0,I am able to report everything easily
+CUS-331650,2022,2,2022-04-01,2022-06-09,7,4,Once a Day,3,4.0,"I can pull all the numbers, but don't understand them"
+CUS-331650,2022,3,2022-07-01,2022-09-22,6,3,Once a Day,3,4.0,I tried but could not find everything I need
+CUS-1496850,2022,3,2022-07-01,2022-09-05,0,1,Once a Day,1,4.0,I am able to report everything easily
+CUS-1496850,2022,1,2022-01-01,2022-03-23,8,5,Once a Week,5,5.0,I am able to report everything easily
+CUS-1463000,2022,1,2022-01-01,2022-03-01,10,5,Once a Day,5,4.0,I am able to report everything easily
+CUS-1463000,2022,1,2022-01-01,2022-03-21,10,5,Once a Day,5,4.0,I am able to report everything easily
+CUS-1463000,2022,2,2022-04-01,2022-05-24,10,5,Once a Day,4,4.0,I am able to report everything easily
+CUS-1463000,2022,3,2022-07-01,2022-07-05,10,5,Once a Day,4,4.0,I am able to report everything easily
+CUS-1463000,2022,1,2022-01-01,2022-02-01,8,5,Once a Week,4,4.0,I tried but could not find everything I need
+CUS-1463000,2022,2,2022-04-01,2022-04-22,9,5,Once a Week,4,3.0,I am able to report everything easily
+CUS-1463000,2022,3,2022-07-01,2022-07-06,8,5,Once a Month,4,4.0,I tried but could not find everything I need
+CUS-1476500,2022,2,2022-04-01,2022-06-29,9,4,Once a Week,4,4.0,I tried but could not find everything I need
+CUS-1476500,2022,3,2022-07-01,2022-09-05,8,4,Once a Week,3,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-1476500,2022,3,2022-07-01,2022-08-31,9,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-1479350,2022,2,2022-04-01,2022-05-19,4,3,Once a Week,3,3.0,I tried but could not find everything I need
+CUS-1479350,2022,3,2022-07-01,2022-09-06,6,3,Once a Week,3,3.0,"I can pull all the numbers, but don't understand them"
+CUS-1479350,2022,1,2022-01-01,2022-03-21,7,3,Once a Week,4,5.0,"I can pull all the numbers, but don't understand them"
+CUS-1479350,2022,3,2022-07-01,2022-08-31,9,4,Once a Week,4,4.0,I don't use it often
+CUS-1317050,2022,2,2022-04-01,2022-06-14,8,4,Once a Day,5,5.0,I am able to report everything easily
+CUS-1317050,2022,1,2022-01-01,2022-03-01,8,4,Once a Day,4,4.0,I am able to report everything easily
+CUS-1317050,2022,1,2022-01-01,2022-03-21,8,4,Once a Day,4,4.0,I am able to report everything easily
+CUS-1317050,2022,1,2022-01-01,2022-03-01,9,4,Once a Week,4,,I tried but could not find everything I need
+CUS-1317050,2022,1,2022-01-01,2022-03-21,9,4,Once a Week,4,,I tried but could not find everything I need
+CUS-1317050,2022,3,2022-07-01,2022-09-05,8,4,Once a Day,4,4.0,I am able to report everything easily
+CUS-1317050,2022,2,2022-04-01,2022-06-23,7,4,Once a Day,4,4.0,I tried but could not find everything I need
+CUS-1317050,2022,3,2022-07-01,2022-09-18,7,4,Once a Day,3,3.0,I tried but could not find everything I need
+CUS-1335000,2022,1,2022-01-01,2022-03-01,8,4,Once a Week,4,4.0,I am able to report everything easily
+CUS-1335000,2022,1,2022-01-01,2022-03-21,8,4,Once a Week,4,4.0,I am able to report everything easily
+CUS-1335000,2022,2,2022-04-01,2022-06-27,8,4,Once a Week,3,3.0,I need someone from Insider team to provide me the report from the panel
+CUS-264900,2022,1,2022-01-01,2022-03-01,10,5,Once a Day,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-264900,2022,2,2022-04-01,2022-04-18,8,4,Once a Week,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-1478450,2022,2,2022-04-01,2022-05-30,10,5,Once a Day,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1478450,2022,3,2022-07-01,2022-09-02,10,5,Once a Day,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1478450,2022,2,2022-04-01,2022-06-01,10,5,Once a Month,5,5.0,I tried but could not find everything I need
+CUS-1478450,2022,3,2022-07-01,2022-09-19,10,5,Once a Week,5,5.0,I am able to report everything easily
+CUS-1485100,2022,1,2022-01-01,2022-03-01,8,4,Once a Week,4,3.0,I tried but could not find everything I need
+CUS-1485100,2022,3,2022-07-01,2022-09-09,5,3,Once a Day,3,3.0,I tried but could not find everything I need
+CUS-1485100,2022,2,2022-04-01,2022-05-11,10,4,Once a Day,5,5.0,I am able to report everything easily
+CUS-1485100,2022,2,2022-04-01,2022-05-22,8,5,Once a Week,4,3.0,"I can pull all the numbers, but don't understand them"
+CUS-1485100,2022,3,2022-07-01,2022-08-01,10,5,Once a Day,5,4.0,I am able to report everything easily
+CUS-1477000,2022,1,2022-01-01,2022-02-01,10,5,Once a Month,4,4.0,I am able to report everything easily
+CUS-1477000,2022,3,2022-07-01,2022-09-08,7,4,Once a Week,4,3.0,I am able to report everything easily
+CUS-1443550,2022,2,2022-04-01,2022-06-29,9,5,Once a Week,4,5.0,I am able to report everything easily
+CUS-1443550,2022,1,2022-01-01,2022-03-31,8,4,Once a Month,4,5.0,I am able to report everything easily
+CUS-1443550,2022,2,2022-04-01,2022-06-29,8,5,Once a Month,4,5.0,I don't use it often
+CUS-1443550,2022,1,2022-01-01,2022-03-31,9,5,Once a Week,4,4.0,I tried but could not find everything I need
+CUS-1378600,2022,3,2022-07-01,2022-09-12,10,5,Once a Week,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1378600,2022,2,2022-04-01,2022-06-22,9,4,Once a Day,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-1443150,2022,2,2022-04-01,2022-05-05,8,4,Once a Month,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-1443150,2022,3,2022-07-01,2022-09-26,7,5,Once a Week,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-515050,2022,1,2022-01-01,2022-03-22,8,4,Once a Month,4,5.0,I am able to report everything easily
+CUS-515050,2022,3,2022-07-01,2022-09-05,8,4,Once a Week,4,5.0,I am able to report everything easily
+CUS-317450,2022,1,2022-01-01,2022-03-01,9,4,Once a Week,5,5.0,I tried but could not find everything I need
+CUS-317450,2022,2,2022-04-01,2022-04-18,7,3,Once a Week,3,3.0,I am able to report everything easily
+CUS-317450,2022,3,2022-07-01,2022-08-05,5,3,Once a Week,3,3.0,I tried but could not find everything I need
+CUS-317450,2022,3,2022-07-01,2022-08-05,1,3,Once a Week,3,3.0,I don't use it often
+CUS-317450,2022,3,2022-07-01,2022-09-05,1,2,Once a Day,1,3.0,"I can pull all the numbers, but don't understand them"
+CUS-317450,2022,1,2022-01-01,2022-03-30,8,4,Once a Week,5,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-317450,2022,2,2022-04-01,2022-06-22,9,4,Once a Week,4,3.0,I tried but could not find everything I need
+CUS-161650,2022,1,2022-01-01,2022-03-21,6,4,Once a Day,3,4.0,I am able to report everything easily
+CUS-161650,2022,2,2022-04-01,2022-05-26,8,4,Once a Week,4,5.0,I am able to report everything easily
+CUS-248500,2022,1,2022-01-01,2022-02-01,10,5,Once a Week,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-248500,2022,2,2022-04-01,2022-06-29,10,5,Once a Week,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-248500,2022,3,2022-07-01,2022-08-09,10,4,Once a Week,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-248500,2022,2,2022-04-01,2022-06-30,10,5,Once a Month,5,5.0,I don't use it often
+CUS-248500,2022,3,2022-07-01,2022-08-09,9,5,Once a Week,5,5.0,I don't use it often
+CUS-248500,2022,3,2022-07-01,2022-08-09,10,5,Once a Month,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1495000,2022,1,2022-01-01,2022-03-01,8,4,Once a Day,4,4.0,I tried but could not find everything I need
+CUS-1495000,2022,1,2022-01-01,2022-03-21,8,4,Once a Day,4,4.0,I tried but could not find everything I need
+CUS-1445550,2022,2,2022-04-01,2022-06-07,10,5,Once a Day,5,4.0,I am able to report everything easily
+CUS-1445550,2022,3,2022-07-01,2022-09-13,7,4,Once a Day,3,3.0,I tried but could not find everything I need
+CUS-1445550,2022,2,2022-04-01,2022-06-07,10,5,Once a Day,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1519950,2022,2,2022-04-01,2022-06-07,6,3,Once a Month,3,3.0,I don't use it often
+CUS-1519950,2022,2,2022-04-01,2022-06-17,8,4,Once a Day,4,5.0,I tried but could not find everything I need
+CUS-730800,2022,2,2022-04-01,2022-06-30,6,4,Once a Week,3,3.0,I don't use it often
+CUS-730800,2022,1,2022-01-01,2022-03-01,7,3,Once a Day,3,3.0,I tried but could not find everything I need
+CUS-730800,2022,1,2022-01-01,2022-03-21,7,3,Once a Day,3,3.0,I tried but could not find everything I need
+CUS-730800,2022,2,2022-04-01,2022-06-30,7,4,Once a Day,4,4.0,I am able to report everything easily
+CUS-1481350,2022,1,2022-01-01,2022-03-28,9,4,Once a Day,4,5.0,I am able to report everything easily
+CUS-1481350,2022,3,2022-07-01,2022-09-19,10,3,Once a Day,5,4.0,I don't use it often
+CUS-1466250,2022,1,2022-01-01,2022-03-01,8,4,Once a Week,4,2.0,I don't use it often
+CUS-1466250,2022,1,2022-01-01,2022-03-21,8,4,Once a Week,4,2.0,I don't use it often
+CUS-1466250,2022,2,2022-04-01,2022-06-23,9,5,Once a Week,4,5.0,I don't use it often
+CUS-1466250,2022,3,2022-07-01,2022-09-23,9,5,Once a Month,5,4.0,I am able to report everything easily
+CUS-1466250,2022,3,2022-07-01,2022-09-20,7,5,Once a Month,5,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-1131850,2022,1,2022-01-01,2022-03-22,7,5,Once a Week,5,,I need someone from Insider team to provide me the report from the panel
+CUS-1131850,2022,3,2022-07-01,2022-07-05,10,5,Once a Week,5,5.0,"I can pull all the numbers, but don't understand them"
+CUS-1131850,2022,3,2022-07-01,2022-09-05,10,5,Once a Day,4,4.0,I tried but could not find everything I need
+CUS-859900,2022,1,2022-01-01,2022-02-01,5,3,Once a Week,3,2.0,I need someone from Insider team to provide me the report from the panel
+CUS-859900,2022,2,2022-04-01,2022-06-29,4,4,Once a Week,3,3.0,I need someone from Insider team to provide me the report from the panel
+CUS-859900,2022,3,2022-07-01,2022-07-07,1,4,Once a Week,1,3.0,"I can pull all the numbers, but don't understand them"
+CUS-859900,2022,3,2022-07-01,2022-08-07,3,3,Once a Week,3,2.0,"I can pull all the numbers, but don't understand them"
+CUS-859900,2022,2,2022-04-01,2022-06-29,10,5,Once a Week,5,5.0,I am able to report everything easily
+CUS-470750,2022,3,2022-07-01,2022-08-05,8,5,Once a Day,4,5.0,I am able to report everything easily
+CUS-470750,2022,1,2022-01-01,2022-03-01,9,4,Once a Day,4,4.0,I don't use it often
+CUS-470750,2022,3,2022-07-01,2022-09-26,7,4,Once a Day,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-1473950,2022,2,2022-04-01,2022-05-31,9,5,Once a Day,3,5.0,I am able to report everything easily
+CUS-1473950,2022,3,2022-07-01,2022-08-04,8,4,Once a Week,4,4.0,I am able to report everything easily
+CUS-1448650,2022,1,2022-01-01,2022-03-21,10,5,Once a Month,5,3.0,I don't use it often
+CUS-1448650,2022,1,2022-01-01,2022-03-23,7,3,Once a Day,3,3.0,I am able to report everything easily
+CUS-1448650,2022,1,2022-01-01,2022-02-01,8,3,Once a Week,4,5.0,I am able to report everything easily
+CUS-1494700,2022,1,2022-01-01,2022-03-01,5,3,Once a Week,3,,I tried but could not find everything I need
+CUS-1494700,2022,1,2022-01-01,2022-03-21,5,3,Once a Week,3,,I tried but could not find everything I need
+CUS-161600,2022,2,2022-04-01,2022-06-23,6,3,Once a Day,3,3.0,I don't use it often
+CUS-161600,2022,3,2022-07-01,2022-09-22,8,4,Once a Day,4,5.0,"I can pull all the numbers, but don't understand them"
+CUS-161600,2022,2,2022-04-01,2022-06-22,8,5,Once a Day,4,4.0,"I can pull all the numbers, but don't understand them"
+CUS-161600,2022,3,2022-07-01,2022-09-21,8,5,Once a Week,4,4.0,I don't use it often
+CUS-1449700,2022,3,2022-07-01,2022-07-10,8,4,Once a Day,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-1449700,2022,2,2022-04-01,2022-04-18,3,1,Once a Week,2,2.0,I need someone from Insider team to provide me the report from the panel
+CUS-1449700,2022,3,2022-07-01,2022-09-19,10,5,Once a Day,4,3.0,I am able to report everything easily
+CUS-1449700,2022,3,2022-07-01,2022-09-08,10,4,Once a Day,4,3.0,I need someone from Insider team to provide me the report from the panel
+CUS-1454450,2022,1,2022-01-01,2022-03-01,8,5,Once a Day,5,3.0,I am able to report everything easily
+CUS-1454450,2022,1,2022-01-01,2022-03-21,8,5,Once a Day,5,3.0,I am able to report everything easily
+CUS-1454450,2022,3,2022-07-01,2022-08-31,10,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-1454450,2022,3,2022-07-01,2022-08-10,10,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-1454450,2022,2,2022-04-01,2022-05-17,8,4,Once a Day,4,4.0,I don't use it often
+CUS-1454450,2022,3,2022-07-01,2022-09-05,9,5,Once a Day,4,5.0,I am able to report everything easily
+CUS-1414900,2022,2,2022-04-01,2022-05-27,10,5,Once a Day,5,4.0,I am able to report everything easily
+CUS-1496500,2022,2,2022-04-01,2022-06-09,8,4,Once a Day,3,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1496500,2022,3,2022-07-01,2022-09-29,8,4,Once a Week,4,4.0,I am able to report everything easily
+CUS-1496500,2022,1,2022-01-01,2022-02-01,9,4,Once a Day,5,4.0,I am able to report everything easily
+CUS-1496500,2022,2,2022-04-01,2022-05-11,9,4,Once a Day,4,4.0,I don't use it often
+CUS-1496500,2022,3,2022-07-01,2022-09-05,8,4,Once a Day,3,3.0,I am able to report everything easily
+CUS-1496500,2022,2,2022-04-01,2022-06-07,10,5,Once a Day,5,3.0,I need someone from Insider team to provide me the report from the panel
+CUS-156950,2022,3,2022-07-01,2022-08-05,2,3,Once a Day,3,1.0,I need someone from Insider team to provide me the report from the panel
+CUS-156950,2022,1,2022-01-01,2022-02-01,9,5,Once a Month,5,5.0,I don't use it often
+CUS-156950,2022,3,2022-07-01,2022-09-06,9,5,Once a Month,5,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-156950,2022,2,2022-04-01,2022-06-30,6,2,Once a Week,2,1.0,I tried but could not find everything I need
+CUS-156950,2022,3,2022-07-01,2022-09-06,9,5,Once a Month,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-156950,2022,1,2022-01-01,2022-02-01,10,4,Once a Week,4,,I need someone from Insider team to provide me the report from the panel
+CUS-1480950,2022,1,2022-01-01,2022-03-31,7,4,Once a Day,4,4.0,I tried but could not find everything I need
+CUS-1480950,2022,2,2022-04-01,2022-06-30,8,4,Once a Day,4,4.0,I tried but could not find everything I need
+CUS-1480950,2022,3,2022-07-01,2022-09-02,7,4,Once a Day,3,5.0,I tried but could not find everything I need
+CUS-1482200,2022,1,2022-01-01,2022-03-01,9,5,Once a Day,0,5.0,I am able to report everything easily
+CUS-1482200,2022,2,2022-04-01,2022-05-31,8,4,Once a Day,4,4.0,I tried but could not find everything I need
+CUS-1482200,2022,3,2022-07-01,2022-07-05,7,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-1482200,2022,1,2022-01-01,2022-03-21,10,5,Once a Week,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1482200,2022,2,2022-04-01,2022-05-23,10,4,Once a Day,5,5.0,I don't use it often
+CUS-1482200,2022,3,2022-07-01,2022-08-04,10,5,Once a Week,5,5.0,I am able to report everything easily
+CUS-1482200,2022,3,2022-07-01,2022-08-05,10,5,Once a Week,5,5.0,I am able to report everything easily
+CUS-1482200,2022,1,2022-01-01,2022-03-21,8,4,Once a Month,4,4.0,I am able to report everything easily
+CUS-1482200,2022,2,2022-04-01,2022-05-19,7,3,Once a Week,3,3.0,"I can pull all the numbers, but don't understand them"
+CUS-1482200,2022,3,2022-07-01,2022-08-11,8,4,Once a Day,4,4.0,I am able to report everything easily
+CUS-1466300,2022,3,2022-07-01,2022-09-29,9,4,Once a Week,4,3.0,"I can pull all the numbers, but don't understand them"
+CUS-1485150,2022,3,2022-07-01,2022-09-23,8,4,Once a Week,5,5.0,I am able to report everything easily
+CUS-1485150,2022,2,2022-04-01,2022-04-20,10,5,Once a Week,4,4.0,I don't use it often
+CUS-1485150,2022,3,2022-07-01,2022-07-05,10,5,Once a Week,5,4.0,I am able to report everything easily
+CUS-1485150,2022,3,2022-07-01,2022-08-05,10,5,Once a Week,5,4.0,I am able to report everything easily
+CUS-1485150,2022,3,2022-07-01,2022-09-06,8,4,Once a Week,5,4.0,I am able to report everything easily
+CUS-153600,2022,1,2022-01-01,2022-03-01,10,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-153600,2022,2,2022-04-01,2022-06-16,10,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-153600,2022,3,2022-07-01,2022-08-18,10,5,Once a Week,5,5.0,I am able to report everything easily
+CUS-153600,2022,2,2022-04-01,2022-06-16,10,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-1478400,2022,2,2022-04-01,2022-05-26,8,5,Once a Day,4,3.0,I need someone from Insider team to provide me the report from the panel
+CUS-1478400,2022,3,2022-07-01,2022-08-31,8,5,Once a Day,4,2.0,I tried but could not find everything I need
+CUS-1478400,2022,3,2022-07-01,2022-08-31,8,4,Once a Day,4,3.0,"I can pull all the numbers, but don't understand them"
+CUS-1478400,2022,3,2022-07-01,2022-09-07,7,4,Once a Day,4,3.0,"I can pull all the numbers, but don't understand them"
+CUS-1478400,2022,1,2022-01-01,2022-03-23,7,5,Once a Day,5,4.0,I don't use it often
+CUS-1373400,2022,2,2022-04-01,2022-06-21,9,4,Once a Week,4,4.0,I don't use it often
+CUS-1373400,2022,3,2022-07-01,2022-09-13,10,5,Once a Week,4,5.0,I am able to report everything easily
+CUS-1199150,2022,2,2022-04-01,2022-06-21,10,5,Once a Week,5,4.0,I don't use it often
+CUS-1199150,2022,3,2022-07-01,2022-09-22,7,4,Once a Month,4,4.0,I don't use it often
+CUS-1199150,2022,1,2022-01-01,2022-03-31,6,4,Once a Day,4,3.0,I don't use it often
+CUS-1199150,2022,2,2022-04-01,2022-06-24,6,4,Once a Day,3,3.0,I don't use it often
+CUS-1199150,2022,3,2022-07-01,2022-09-29,7,4,Once a Day,4,5.0,I don't use it often
+CUS-1468150,2022,1,2022-01-01,2022-02-01,8,4,Once a Day,4,5.0,I tried but could not find everything I need
+CUS-1489150,2022,1,2022-01-01,2022-03-21,7,3,Once a Day,3,4.0,I am able to report everything easily
+CUS-1489150,2022,3,2022-07-01,2022-09-08,7,4,Once a Day,4,3.0,I am able to report everything easily
+CUS-1526050,2022,3,2022-07-01,2022-08-17,10,5,Once a Day,5,5.0,"I can pull all the numbers, but don't understand them"
+CUS-1526050,2022,3,2022-07-01,2022-09-19,8,5,Once a Week,4,4.0,"I can pull all the numbers, but don't understand them"
+CUS-1462250,2022,1,2022-01-01,2022-03-01,8,4,Once a Day,4,4.0,I am able to report everything easily
+CUS-1462250,2022,1,2022-01-01,2022-03-21,8,4,Once a Day,4,4.0,I am able to report everything easily
+CUS-1462250,2022,2,2022-04-01,2022-05-17,8,4,Once a Week,4,3.0,I need someone from Insider team to provide me the report from the panel
+CUS-1462250,2022,1,2022-01-01,2022-03-01,10,4,Once a Day,4,,I am able to report everything easily
+CUS-1462250,2022,1,2022-01-01,2022-03-21,10,4,Once a Day,4,,I am able to report everything easily
+CUS-1462250,2022,2,2022-04-01,2022-05-10,7,3,Once a Day,3,4.0,I tried but could not find everything I need
+CUS-1462250,2022,1,2022-01-01,2022-02-01,8,4,Once a Day,3,4.0,I am able to report everything easily
+CUS-1462250,2022,1,2022-01-01,2022-03-21,8,4,Once a Day,3,4.0,I am able to report everything easily
+CUS-176450,2022,2,2022-04-01,2022-06-29,9,5,Once a Month,4,5.0,I don't use it often
+CUS-176450,2022,2,2022-04-01,2022-04-18,4,3,Once a Day,4,4.0,I tried but could not find everything I need
+CUS-176450,2022,2,2022-04-01,2022-06-29,9,4,Once a Day,4,3.0,I need someone from Insider team to provide me the report from the panel
+CUS-176450,2022,3,2022-07-01,2022-09-05,5,3,Once a Day,4,4.0,I tried but could not find everything I need
+CUS-176450,2022,2,2022-04-01,2022-06-29,9,5,Once a Month,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-157000,2022,3,2022-07-01,2022-09-30,7,4,Once a Week,3,3.0,I tried but could not find everything I need
+CUS-226150,2022,1,2022-01-01,2022-02-01,8,4,Once a Day,4,1.0,I don't use it often
+CUS-160300,2022,2,2022-04-01,2022-06-29,10,5,Once a Week,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-160300,2022,3,2022-07-01,2022-08-11,8,4,Once a Week,4,4.0,I tried but could not find everything I need
+CUS-160300,2022,1,2022-01-01,2022-03-30,10,5,Once a Week,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1477350,2022,1,2022-01-01,2022-03-01,8,3,Once a Day,3,4.0,I don't use it often
+CUS-1477350,2022,1,2022-01-01,2022-03-21,8,3,Once a Day,3,4.0,I don't use it often
+CUS-1477350,2022,2,2022-04-01,2022-06-30,9,4,Once a Day,4,4.0,I don't use it often
+CUS-1477350,2022,3,2022-07-01,2022-09-01,9,4,Once a Day,4,4.0,I don't use it often
+CUS-1495500,2022,1,2022-01-01,2022-03-21,6,4,Once a Week,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-1495500,2022,2,2022-04-01,2022-05-31,7,3,Once a Day,3,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-1495500,2022,3,2022-07-01,2022-09-20,10,5,Once a Day,5,5.0,"I can pull all the numbers, but don't understand them"
+CUS-1495500,2022,1,2022-01-01,2022-03-01,9,5,Once a Day,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1495500,2022,1,2022-01-01,2022-03-21,9,5,Once a Day,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1495500,2022,2,2022-04-01,2022-06-22,6,3,Once a Week,4,3.0,I am able to report everything easily
+CUS-1495500,2022,3,2022-07-01,2022-09-13,7,4,Once a Week,4,4.0,I am able to report everything easily
+CUS-1242200,2022,1,2022-01-01,2022-03-01,10,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-1242200,2022,1,2022-01-01,2022-03-21,10,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-1242200,2022,2,2022-04-01,2022-05-11,10,5,Once a Week,5,5.0,I am able to report everything easily
+CUS-1242200,2022,2,2022-04-01,2022-05-18,10,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-1242200,2022,3,2022-07-01,2022-09-05,10,5,Once a Week,5,5.0,I am able to report everything easily
+CUS-1242200,2022,2,2022-04-01,2022-05-11,7,3,Once a Day,4,4.0,I don't use it often
+CUS-1242200,2022,2,2022-04-01,2022-05-18,10,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-1242200,2022,3,2022-07-01,2022-07-27,10,5,Once a Day,5,5.0,I am able to report everything easily
+CUS-1492850,2022,2,2022-04-01,2022-05-06,7,4,Once a Week,4,4.0,I am able to report everything easily
+CUS-1543550,2022,3,2022-07-01,2022-09-29,10,5,Once a Week,5,5.0,"I can pull all the numbers, but don't understand them"
+CUS-617450,2022,3,2022-07-01,2022-09-15,7,4,Once a Day,3,3.0,"I can pull all the numbers, but don't understand them"
+CUS-617450,2022,3,2022-07-01,2022-09-30,8,4,Once a Week,3,4.0,I am able to report everything easily
+CUS-652450,2022,2,2022-04-01,2022-06-28,10,5,Once a Day,5,5.0,I tried but could not find everything I need
+CUS-652450,2022,3,2022-07-01,2022-09-23,10,5,Once a Day,5,5.0,I don't use it often
+CUS-652450,2022,3,2022-07-01,2022-09-22,10,5,Once a Day,5,3.0,"I can pull all the numbers, but don't understand them"
+CUS-1557700,2022,3,2022-07-01,2022-09-30,7,4,Once a Month,4,3.0,I need someone from Insider team to provide me the report from the panel
+CUS-1496300,2022,3,2022-07-01,2022-07-22,7,3,Once a Week,3,3.0,I don't use it often
+CUS-1496300,2022,3,2022-07-01,2022-09-06,6,3,Once a Day,3,2.0,I tried but could not find everything I need
+CUS-1496300,2022,3,2022-07-01,2022-08-09,8,5,Once a Week,4,3.0,I am able to report everything easily
+CUS-1513400,2022,2,2022-04-01,2022-05-31,10,5,Once a Day,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1513400,2022,1,2022-01-01,2022-03-31,7,4,Once a Day,3,3.0,I need someone from Insider team to provide me the report from the panel
+CUS-1513400,2022,2,2022-04-01,2022-06-01,7,3,Once a Day,3,3.0,I am able to report everything easily
+CUS-1513400,2022,3,2022-07-01,2022-09-29,8,3,Once a Day,3,3.0,I need someone from Insider team to provide me the report from the panel
+CUS-1482000,2022,3,2022-07-01,2022-08-17,9,5,Once a Day,5,5.0,"I can pull all the numbers, but don't understand them"
+CUS-277650,2022,2,2022-04-01,2022-06-27,8,4,Once a Day,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-277650,2022,3,2022-07-01,2022-08-05,10,5,Once a Day,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-277650,2022,3,2022-07-01,2022-09-05,10,5,Once a Day,5,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-277650,2022,1,2022-01-01,2022-03-01,10,5,Once a Day,5,4.0,I am able to report everything easily
+CUS-277650,2022,2,2022-04-01,2022-06-07,10,5,Once a Day,5,4.0,I tried but could not find everything I need
+CUS-277650,2022,3,2022-07-01,2022-09-19,10,5,Once a Day,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-1490750,2022,1,2022-01-01,2022-02-01,10,5,Once a Week,5,5.0,I am able to report everything easily
+CUS-1490750,2022,1,2022-01-01,2022-03-21,10,5,Once a Week,5,5.0,I am able to report everything easily
+CUS-1490750,2022,2,2022-04-01,2022-06-30,7,3,Once a Month,3,3.0,"I can pull all the numbers, but don't understand them"
+CUS-1490750,2022,1,2022-01-01,2022-02-01,8,4,Once a Day,4,4.0,I am able to report everything easily
+CUS-1490750,2022,2,2022-04-01,2022-06-21,8,3,Once a Day,4,4.0,I am able to report everything easily
+CUS-1490750,2022,3,2022-07-01,2022-09-07,9,4,Once a Week,4,5.0,I am able to report everything easily
+CUS-152550,2022,1,2022-01-01,2022-02-01,9,5,Once a Week,5,5.0,I don't use it often
+CUS-152550,2022,2,2022-04-01,2022-05-09,10,5,Once a Month,5,5.0,I need someone from Insider team to provide me the report from the panel
+CUS-155450,2022,1,2022-01-01,2022-03-30,7,3,Once a Day,3,3.0,I need someone from Insider team to provide me the report from the panel
+CUS-155450,2022,2,2022-04-01,2022-06-30,6,3,Once a Week,4,4.0,I need someone from Insider team to provide me the report from the panel
+CUS-155450,2022,3,2022-07-01,2022-09-29,7,4,Once a Week,4,4.0,I need someone from Insider team to provide me the report from the panel
