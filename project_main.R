@@ -1,0 +1,752 @@
+## ----setup, include=FALSE-----------------------------------------------------
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+
+## ----load_data----------------------------------------------------------------
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(corrplot)
+library(caret)
+
+data_path <- "./data"
+
+# --- Load Training Data ---
+train_demo <- read.csv(file.path(data_path, "customer_demographics_train.csv"), stringsAsFactors = FALSE)
+train_mrr <- read.csv(file.path(data_path, "customer_monthly_recurring_revenue_train.csv"), stringsAsFactors = FALSE)
+train_region <- read.csv(file.path(data_path, "customer_region_and_industry_train.csv"), stringsAsFactors = FALSE)
+train_rev_hist <- read.csv(file.path(data_path, "customer_revenue_history_train.csv"), stringsAsFactors = FALSE)
+train_status <- read.csv(file.path(data_path, "customer_status_level_train.csv"), stringsAsFactors = FALSE)
+train_newsletter <- read.csv(file.path(data_path, "newsletter_engagement_train.csv"), stringsAsFactors = FALSE)
+train_bug_reports <- read.csv(file.path(data_path, "product_bug_reports_train.csv"), stringsAsFactors = FALSE)
+train_support <- read.csv(file.path(data_path, "support_ticket_activity_train.csv"), stringsAsFactors = FALSE)
+train_sat_scores <- read.csv(file.path(data_path, "customer_satisfaction_scores_train.csv"), stringsAsFactors = FALSE)
+
+# --- Load Test Data ---
+test_demo <- read.csv(file.path(data_path, "customer_demographics_test.csv"), stringsAsFactors = FALSE)
+test_mrr <- read.csv(file.path(data_path, "customer_monthly_recurring_revenue_test.csv"), stringsAsFactors = FALSE)
+test_region <- read.csv(file.path(data_path, "customer_region_and_industry_test.csv"), stringsAsFactors = FALSE)
+test_rev_hist <- read.csv(file.path(data_path, "customer_revenue_history_test.csv"), stringsAsFactors = FALSE)
+test_status <- read.csv(file.path(data_path, "customer_status_level_test.csv"), stringsAsFactors = FALSE)
+test_newsletter <- read.csv(file.path(data_path, "newsletter_engagement_test.csv"), stringsAsFactors = FALSE)
+test_bug_reports <- read.csv(file.path(data_path, "product_bug_reports_test.csv"), stringsAsFactors = FALSE)
+test_support <- read.csv(file.path(data_path, "support_ticket_activity_test.csv"), stringsAsFactors = FALSE)
+test_sat_scores <- read.csv(file.path(data_path, "customer_satisfaction_scores_test.csv"), stringsAsFactors = FALSE)
+
+## ----merge_train--------------------------------------------------------------
+# 1. Standardize ID
+if ("CUS.ID" %in% names(train_demo)) {
+    train_demo <- train_demo %>% rename(Customer.ID = CUS.ID)
+}
+
+# 2. Aggregate Satisfaction Scores
+if (!is.null(train_sat_scores)) {
+    # Ensure Ratings are Numeric (Fixing User Issue)
+    # We explicitly convert the Likert scale columns to numeric
+    # AND Map text-based columns ('Understanding', 'Frequency') to numeric scales
+    train_sat_scores <- train_sat_scores %>%
+        mutate(across(c(
+            contains("recommend"),
+            contains("value.you.gain"),
+            contains("quality"),
+            contains("usability")
+        ), ~ suppressWarnings(as.numeric(.)))) %>%
+        # Remove irrelevant Year/Quarter
+        select(-Year, -Quarter)
+
+    train_sat_agg <- train_sat_scores %>%
+        group_by(Customer.ID) %>%
+        summarise(
+            across(where(is.numeric), \(x) mean(x, na.rm = TRUE)),
+            across(where(is.character), \(x) max(x, na.rm = TRUE)) # Placeholder aggregation for strings/dates
+        )
+} else {
+    train_sat_agg <- NULL
+}
+
+# Aggregate Bug Reports (Found duplicates in source)
+train_bug_agg <- train_bug_reports %>%
+    group_by(Customer.ID) %>%
+    summarise(Product.Bug.Task.Count = sum(Product.Bug.Task.Count, na.rm = TRUE))
+
+# 3. Merge
+train_master <- train_demo %>%
+    left_join(train_mrr, by = "Customer.ID") %>%
+    left_join(train_region, by = "Customer.ID") %>%
+    left_join(train_rev_hist, by = "Customer.ID")
+
+if (!is.null(train_sat_agg)) {
+    train_master <- train_master %>% left_join(train_sat_agg, by = "Customer.ID")
+}
+
+train_master <- train_master %>%
+    left_join(train_status, by = "Customer.ID") %>%
+    left_join(train_newsletter, by = "Customer.ID") %>%
+    left_join(train_bug_agg, by = "Customer.ID") %>%
+    left_join(train_support, by = "Customer.ID") %>%
+    # Fill NAs for Counts
+    mutate(
+        Product.Bug.Task.Count = replace_na(Product.Bug.Task.Count, 0),
+        Company.Newsletter.Interaction.Count = replace_na(Company.Newsletter.Interaction.Count, 0),
+        Help.Ticket.Count = replace_na(Help.Ticket.Count, 0)
+    )
+
+## ----check_dims---------------------------------------------------------------
+dim(train_master)
+
+## ----merge_test---------------------------------------------------------------
+# 1. Standardize ID
+if ("CUS.ID" %in% names(test_demo)) {
+    test_demo <- test_demo %>% rename(Customer.ID = CUS.ID)
+}
+
+# 2. Aggregate Satisfaction Scores
+# Ensure Ratings are Numeric
+test_sat_scores <- test_sat_scores %>%
+    mutate(across(c(
+        contains("recommend"),
+        contains("value.you.gain"),
+        contains("quality"),
+        contains("usability")
+    ), ~ suppressWarnings(as.numeric(.)))) %>%
+    # Remove irrelevant Year/Quarter
+    select(-Year, -Quarter)
+
+test_sat_agg <- test_sat_scores %>%
+    group_by(Customer.ID) %>%
+    summarise(
+        across(where(is.numeric), \(x) mean(x, na.rm = TRUE)),
+        across(where(is.character), \(x) max(x, na.rm = TRUE))
+    )
+
+# Aggregate Bug Reports (Test file has duplicates)
+test_bug_agg <- test_bug_reports %>%
+    group_by(Customer.ID) %>%
+    summarise(Product.Bug.Task.Count = sum(Product.Bug.Task.Count, na.rm = TRUE))
+
+# 3. Merge
+test_master <- test_demo %>%
+    left_join(test_mrr, by = "Customer.ID") %>%
+    left_join(test_region, by = "Customer.ID") %>%
+    left_join(test_rev_hist, by = "Customer.ID") %>%
+    left_join(test_sat_agg, by = "Customer.ID") %>%
+    left_join(test_status, by = "Customer.ID") %>%
+    left_join(test_newsletter, by = "Customer.ID") %>%
+    left_join(test_bug_agg, by = "Customer.ID") %>%
+    left_join(test_support, by = "Customer.ID") %>%
+    # Fill NAs
+    mutate(
+        Help.Ticket.Count = replace_na(Help.Ticket.Count, 0),
+        Product.Bug.Task.Count = replace_na(Product.Bug.Task.Count, 0),
+        Company.Newsletter.Interaction.Count = replace_na(Company.Newsletter.Interaction.Count, 0)
+    )
+
+# Check Dimensions
+dim(test_master)
+
+## ----data_cleaning_p1---------------------------------------------------------
+# Define a helper to clean currency
+clean_currency <- function(x) {
+    as.numeric(gsub("[\\$,]", "", x))
+}
+
+# Apply to Training Data
+train_master <- train_master %>%
+    mutate(
+        MRR = clean_currency(MRR),
+        Total.Revenue = clean_currency(Total.Revenue)
+    )
+
+# Apply to Test Data
+test_master <- test_master %>%
+    mutate(
+        MRR = clean_currency(MRR),
+        Total.Revenue = clean_currency(Total.Revenue)
+    )
+
+# Verify conversion
+str(train_master[c("MRR", "Total.Revenue")])
+
+## ----checks-------------------------------------------------------------------
+# Preview Data
+head(train_master) %>%
+    kbl(caption = "Preview of Training Data") %>%
+    kable_styling(bootstrap_options = "striped", full_width = F) %>%
+    scroll_box(height = "400px", width = "100%")
+
+## ----eda_target---------------------------------------------------------------
+# Standardize Status column name if needed (renaming logic confirms we have 'Status')
+# Check distribution
+if ("Status" %in% names(train_master)) {
+    proportions <- table(train_master$Status) %>% prop.table()
+
+    table(train_master$Status) %>%
+        kbl(caption = "Target Variable Distribution") %>%
+        kable_styling(bootstrap_options = "striped", full_width = F)
+
+    # Visualizing Imbalance
+    ggplot(train_master, aes(x = Status, fill = Status)) +
+        geom_bar() +
+        geom_text(stat = "count", aes(label = after_stat(count)), vjust = -0.5) +
+        labs(title = "Distribution of Customer Status", x = "Status", y = "Count") +
+        theme_minimal()
+} else {
+    message("Status column not found for EDA.")
+}
+
+## ----eda_mrr------------------------------------------------------------------
+# Select numeric columns
+numeric_cols <- train_master %>%
+    select_if(is.numeric) %>%
+    names()
+
+# 1. MRR Distribution
+if ("MRR" %in% names(train_master)) {
+    ggplot(data.frame(MRR_val = train_master$MRR), aes(x = MRR_val)) +
+        geom_histogram(bins = 30, fill = "skyblue", color = "black") +
+        labs(title = "Distribution of Monthly Recurring Revenue (MRR)", x = "MRR") +
+        theme_minimal()
+}
+
+## ----eda_tickets--------------------------------------------------------------
+# 2. Ticket Count Distribution
+if ("Help.Ticket.Count" %in% names(train_master)) {
+    ggplot(train_master, aes(x = Help.Ticket.Count)) +
+        geom_histogram(bins = 20, fill = "salmon", color = "black") +
+        labs(title = "Distribution of Support Ticket Counts", x = "Tickets") +
+        theme_minimal()
+}
+
+## ----eda_bivariate_box--------------------------------------------------------
+if ("Status" %in% names(train_master) && "MRR" %in% names(train_master)) {
+    # Temp clean for plot
+    df_plot <- train_master %>%
+        mutate(MRR_plot = if (is.character(MRR)) as.numeric(gsub("[\\$,]", "", MRR)) else MRR)
+
+    # MRR by Status
+    ggplot(df_plot, aes(x = Status, y = MRR_plot, fill = Status)) +
+        geom_boxplot() +
+        labs(title = "MRR Distribution by Customer Status", y = "MRR") +
+        theme_minimal()
+}
+
+## ----missing_analysis---------------------------------------------------------
+# Calculate missing percentage per column
+missing_vals <- colSums(is.na(train_master))
+missing_df <- data.frame(Column = names(missing_vals), Missing_Count = missing_vals) %>%
+    filter(Missing_Count > 0) %>%
+    mutate(Percentage = round((Missing_Count / nrow(train_master)) * 100, 2)) %>%
+    arrange(desc(Percentage))
+
+missing_df %>%
+    kbl(caption = "Missing Values Summary", row.names = FALSE) %>%
+    kable_styling(bootstrap_options = "striped")
+
+## ----imputation---------------------------------------------------------------
+# Define Mode function
+get_mode <- function(v) {
+    uniqv <- unique(na.omit(v))
+    uniqv[which.max(tabulate(match(v, uniqv)))]
+}
+
+# Apply Imputation
+train_clean <- train_master %>%
+    mutate(across(where(is.numeric), ~ ifelse(is.na(.), median(., na.rm = TRUE), .))) %>%
+    mutate(across(where(is.character), ~ ifelse(is.na(.), get_mode(.), .)))
+
+# Verify no missing left
+sum(is.na(train_clean))
+
+## ----feature_eng--------------------------------------------------------------
+# Analysis Reference Date (Max Date in Training)
+analysis_date <- max(as.Date(train_clean$Survey.Date), na.rm = TRUE)
+
+train_eng <- train_clean %>%
+    mutate(
+        # 1. Log Transformation for skewed MRR
+        Log_MRR = log1p(MRR),
+
+        # 2. Customer Tenure (Approximate from Age in Months)
+        Tenure_Years = Customer.Age..Months. / 12,
+
+        # 3. Total Interactions (Engagement Volume)
+        Total_Interactions = Company.Newsletter.Interaction.Count +
+            Product.Bug.Task.Count +
+            Help.Ticket.Count,
+
+        # 4. Average Ticket Resolution Time
+        Avg_Ticket_Time = ifelse(Help.Ticket.Count > 0,
+            Help.Ticket.Lead.Time..hours. / Help.Ticket.Count,
+            0
+        ),
+
+        # 5. NEW: Customer Level Ordinal Encoding (Size/Importance)
+        Customer_Level_Score = case_when(
+            Customer.Level == "Enterprise" ~ 3,
+            Customer.Level == "Semi-Enterprise" ~ 2,
+            Customer.Level == "Long-tail" ~ 1,
+            TRUE ~ 1 # Default to lowest if missing
+        ),
+
+        # 6. NEW: Recency (Days since last survey response)
+        # Measures "Silent Churn" risk
+        Days_Since_Last_Feedback = as.numeric(difftime(analysis_date, as.Date(Survey.Date), units = "days")),
+
+        # 7. NEW: Bug vs. Interaction Ratio
+        # High bugs with low newsletter engagement = High Risk
+        Bug_vs_Interaction_Ratio = Product.Bug.Task.Count / (Company.Newsletter.Interaction.Count + 1),
+
+        # 8. NEW: Understanding Score (Text -> Ordinal 0-5)
+        Understanding_Score = case_when(
+            str_detect(Please.rate.your.understanding.of.our.reporting.capabilities.in.the.panel, "easily") ~ 5,
+            str_detect(Please.rate.your.understanding.of.our.reporting.capabilities.in.the.panel, "pull all") ~ 4,
+            str_detect(Please.rate.your.understanding.of.our.reporting.capabilities.in.the.panel, "could not find") ~ 2,
+            str_detect(Please.rate.your.understanding.of.our.reporting.capabilities.in.the.panel, "need someone") ~ 1,
+            str_detect(Please.rate.your.understanding.of.our.reporting.capabilities.in.the.panel, "don't use") ~ 0,
+            TRUE ~ 0
+        ),
+
+        # 9. NEW: Platform Usage Frequency (Text -> Days per Month)
+        Platform_Usage_Freq = case_when(
+            str_detect(How.frequently.are.you.using.our.platform, "Day") ~ 30,
+            str_detect(How.frequently.are.you.using.our.platform, "Week") ~ 4,
+            str_detect(How.frequently.are.you.using.our.platform, "Month") ~ 1,
+            TRUE ~ 0
+        ),
+
+        # 10. Factor Lumping
+        Vertical = fct_lump_n(Vertical, n = 10, other_level = "Other"),
+        Subvertical = fct_lump_n(Subvertical, n = 10, other_level = "Other"),
+        Region = fct_lump_n(Region, n = 10, other_level = "Other")
+    ) %>%
+    # Drop original columns to prevent multicollinearity and reduce dimensionality
+    # Removed: MRR (Log_MRR used), Age (Tenure used), Lead Time (Avg used)
+    # Removed: Level (Score used), Dates (Recency used)
+    # Removed: Long Text Columns (Scores used)
+    select(
+        -MRR, -Customer.Age..Months., -Help.Ticket.Lead.Time..hours.,
+        -Customer.Level, -Survey.Date, -Response.Date,
+        -Please.rate.your.understanding.of.our.reporting.capabilities.in.the.panel,
+        -How.frequently.are.you.using.our.platform
+    )
+
+
+# Verify Factor Lumping
+# Check number of levels for modified columns
+sapply(train_eng[c("Vertical", "Subvertical", "Region")], function(x) length(unique(x))) %>%
+    kbl(caption = "Factor Levels after Lumping") %>%
+    kable_styling(bootstrap_options = "striped", full_width = F)
+
+## ----feature_eng_test---------------------------------------------------------
+# 1. Data Cleaning (Currency Conversion)
+# Reuse clean_currency function defined earlier
+
+test_clean <- test_master %>%
+    mutate(
+        MRR = clean_currency(MRR),
+        Total.Revenue = clean_currency(Total.Revenue)
+    )
+
+# 2. Imputation (Using Training Statistics)
+# Calculate Train Medians (Numeric)
+train_numeric_vars <- names(select(train_master, where(is.numeric)))
+for (col in train_numeric_vars) {
+    if (col %in% names(test_clean)) {
+        # Calculate median from TRAIN
+        train_val <- median(train_master[[col]], na.rm = TRUE)
+        # Apply to TEST
+        test_clean[[col]][is.na(test_clean[[col]])] <- train_val
+    }
+}
+
+# Calculate Train Modes (Character)
+train_char_vars <- names(select(train_master, where(is.character)))
+for (col in train_char_vars) {
+    if (col %in% names(test_clean)) {
+        train_val <- get_mode(train_master[[col]])
+        test_clean[[col]][is.na(test_clean[[col]])] <- train_val
+    }
+}
+
+# 3. Feature Creation (Exact Formulas)
+test_eng <- test_clean %>%
+    mutate(
+        Log_MRR = log1p(MRR),
+        Tenure_Years = Customer.Age..Months. / 12,
+
+        # Total Interactions (Engagement)
+        Total_Interactions = Company.Newsletter.Interaction.Count +
+            Product.Bug.Task.Count +
+            Help.Ticket.Count,
+        Avg_Ticket_Time = ifelse(Help.Ticket.Count > 0,
+            Help.Ticket.Lead.Time..hours. / Help.Ticket.Count,
+            0
+        ),
+
+        # NEW: Customer Level Ordinal (Match Train)
+        Customer_Level_Score = case_when(
+            Customer.Level == "Enterprise" ~ 3,
+            Customer.Level == "Semi-Enterprise" ~ 2,
+            Customer.Level == "Long-tail" ~ 1,
+            TRUE ~ 1
+        ),
+
+        # NEW: Recency (Uses 'analysis_date' from Train environment for consistency)
+        Days_Since_Last_Feedback = as.numeric(difftime(analysis_date, as.Date(Survey.Date), units = "days")),
+
+        # NEW: Bug Ratio
+        Bug_vs_Interaction_Ratio = Product.Bug.Task.Count / (Company.Newsletter.Interaction.Count + 10), # +10 smoothing to avoid extreme ratios
+
+        # NEW: Understanding Score (Match Train)
+        Understanding_Score = case_when(
+            str_detect(Please.rate.your.understanding.of.our.reporting.capabilities.in.the.panel, "easily") ~ 5,
+            str_detect(Please.rate.your.understanding.of.our.reporting.capabilities.in.the.panel, "pull all") ~ 4,
+            str_detect(Please.rate.your.understanding.of.our.reporting.capabilities.in.the.panel, "could not find") ~ 2,
+            str_detect(Please.rate.your.understanding.of.our.reporting.capabilities.in.the.panel, "need someone") ~ 1,
+            str_detect(Please.rate.your.understanding.of.our.reporting.capabilities.in.the.panel, "don't use") ~ 0,
+            TRUE ~ NA_real_
+        ),
+
+        # NEW: Platform Usage Frequency (Match Train)
+        Platform_Usage_Freq = case_when(
+            str_detect(How.frequently.are.you.using.our.platform, "Day") ~ 30,
+            str_detect(How.frequently.are.you.using.our.platform, "Week") ~ 4,
+            str_detect(How.frequently.are.you.using.our.platform, "Month") ~ 1,
+            TRUE ~ 0
+        )
+    ) %>%
+    # Drop original columns (same as Train)
+    select(
+        -MRR, -Customer.Age..Months., -Help.Ticket.Lead.Time..hours.,
+        -Customer.Level, -Survey.Date, -Response.Date,
+        -Please.rate.your.understanding.of.our.reporting.capabilities.in.the.panel,
+        -How.frequently.are.you.using.our.platform
+    )
+
+# Check Structure
+dim(test_eng)
+
+## ----encoding-----------------------------------------------------------------
+# Convert character columns to factors
+train_encoded <- train_eng %>%
+    select(-Customer.ID) %>%
+    mutate(across(where(is.character), as.factor))
+
+# Ensure Target 'Status' is also a factor (ordered if it has a hierarchy)
+# If Status is ordinal (e.g. Bronze < Silver < Gold), we should specify order.
+# For now we treat it as nominal unless specified otherwise.
+train_encoded$Status <- as.factor(train_encoded$Status)
+
+# Check structure (Concise View)
+data.frame(
+    Column = names(train_encoded),
+    Type = sapply(train_encoded, function(x) paste(class(x), collapse = ", "))
+) %>%
+    kbl(caption = "Data Types after Encoding", row.names = FALSE) %>%
+    kable_styling(bootstrap_options = "striped", full_width = F) %>%
+    scroll_box(height = "400px", width = "100%")
+
+# --- Test Data: Factor Alignment & Encoding ---
+test_encoded <- test_eng
+
+# We use 'train_encoded' as the reference for factor levels
+factor_cols <- names(select(train_encoded, where(is.factor)))
+
+for (col in factor_cols) {
+    # Skip Status if it's in the list (it is the target)
+    if (col == "Status") next
+
+    if (col %in% names(test_encoded)) {
+        # 1. Get Levels from Train
+        train_levels <- levels(train_encoded[[col]])
+
+        # 2. Convert Test to Character
+        x <- as.character(test_encoded[[col]])
+
+        # 3. Handle Unknown Levels
+        # Identify values NOT in training levels
+        unknown_mask <- !(x %in% train_levels)
+
+        if (any(unknown_mask)) {
+            # Map to "Other" if available, else map to the first level (Mode-ish)
+            if ("Other" %in% train_levels) {
+                x[unknown_mask] <- "Other"
+            } else {
+                x[unknown_mask] <- train_levels[1]
+            }
+        }
+
+        # 4. Convert back to Factor with EXACT Train Levels
+        test_encoded[[col]] <- factor(x, levels = train_levels)
+    }
+}
+
+# Ensure no ID columns in predictors (Keep ID for output)
+test_ids <- test_encoded$Customer.ID
+test_input <- test_encoded %>% select(-Customer.ID)
+
+# Ensure columns match (excluding Status)
+predictors <- names(train_encoded)[names(train_encoded) != "Status"]
+missing_cols <- setdiff(predictors, names(test_input))
+if (length(missing_cols) > 0) {
+    stop(paste("Missing columns in Test Data:", paste(missing_cols, collapse = ", ")))
+}
+
+## ----imbalance----------------------------------------------------------------
+set.seed(123)
+
+# Separate predictors and target
+# Note: upSample expects x (predictors) and y (target factor)
+# Exclude High-Cardinality factors (Vertical, Subvertical) to speed up trees
+# Update: Lumping applied, so we can now include them!
+x <- train_encoded %>% select(-Status)
+y <- train_encoded$Status
+
+# Apply UpSampling (Replicates minority class samples)
+train_balanced <- upSample(x = x, y = y, yname = "Status")
+
+# Verify new distribution
+# Verify new distribution
+table(train_balanced$Status) %>%
+    kbl(caption = "Balanced Target Distribution") %>%
+    kable_styling(bootstrap_options = "striped", full_width = F)
+
+# Update train_master (or train_encoded) to use balanced data for modeling
+train_final <- train_balanced
+
+## ----feature_preview_final----------------------------------------------------
+head(train_final) %>%
+    kbl(caption = "Final Feature Set (All Columns)") %>%
+    kable_styling(bootstrap_options = "striped", full_width = F) %>%
+    scroll_box(width = "100%")
+
+## ----split_data---------------------------------------------------------------
+set.seed(42)
+# Partition the balanced data: 75% for training models, 25% for internal validation
+trainIndex <- createDataPartition(train_final$Status,
+    p = .75,
+    list = FALSE,
+    times = 1
+)
+data_train <- train_final[trainIndex, ]
+data_val <- train_final[-trainIndex, ]
+
+## ----model_logreg-------------------------------------------------------------
+library(nnet)
+
+# Train Multinomial Logistic Regression
+# trace=FALSE suppresses iteration output
+model_logreg <- multinom(Status ~ ., data = data_train, trace = FALSE)
+
+# Predict on Validation Set
+pred_logreg <- predict(model_logreg, newdata = data_val)
+
+# Confusion Matrix
+cm_logreg <- confusionMatrix(pred_logreg, data_val$Status)
+cm_logreg
+
+## ----model_tree---------------------------------------------------------------
+library(rpart)
+library(rpart.plot)
+
+
+model_tree <- rpart(Status ~ .,
+    data = data_train, method = "class"
+)
+
+# Visualize the Tree
+# extra=104: Shows class probabilities
+# tweak=1.2: Adjusts text size
+# digits=-1: Use standard R formatting (avoids scientific notation)
+options(scipen = 999) # Enforce no scientific notation globally for this plot
+rpart.plot(model_tree,
+    main = "Decision Tree for Customer Status",
+    box.palette = "auto", shadow.col = "gray", nn = TRUE,
+    extra = 104, tweak = 1.2, digits = -1
+)
+options(scipen = 0) # Reset defaults
+
+# Predict on Validation Set
+pred_tree <- predict(model_tree, newdata = data_val, type = "class")
+
+# Confusion Matrix
+cm_tree <- confusionMatrix(pred_tree, data_val$Status)
+cm_tree
+
+## ----model_gbm----------------------------------------------------------------
+library(gbm)
+
+# Train GBM
+# distribution="multinomial": For 3-class target
+# n.trees=100: Number of iterations (kept low for speed)
+# interaction.depth=3: Tree complexity
+set.seed(123)
+model_gbm <- gbm(Status ~ .,
+    data = data_train, distribution = "multinomial",
+    n.trees = 100, interaction.depth = 3, shrinkage = 0.1, verbose = FALSE
+)
+message("Finished Training GBM")
+
+# Predict on Validation Set
+# GBM returns probabilities (3D array), so we take the class with max probability
+pred_gbm_prob <- predict(model_gbm, newdata = data_val, n.trees = 100, type = "response")
+pred_gbm_class <- apply(pred_gbm_prob, 1, which.max) %>%
+    factor(levels = 1:3, labels = levels(data_val$Status))
+
+# Confusion Matrix
+cm_gbm <- confusionMatrix(pred_gbm_class, data_val$Status)
+cm_gbm
+
+## ----model_rf-----------------------------------------------------------------
+library(randomForest)
+
+# Train Random Forest
+# ntree=100: Number of trees (kept low for demonstration speed)
+# importance=TRUE: Calculate variable importance
+set.seed(123)
+model_rf <- randomForest(Status ~ ., data = data_train, ntree = 100, importance = TRUE)
+message("Finished Training Random Forest")
+
+# Predict on Validation Set
+pred_rf <- predict(model_rf, newdata = data_val)
+
+# Confusion Matrix
+cm_rf <- confusionMatrix(pred_rf, data_val$Status)
+cm_rf
+
+# Variable Importance Plot
+# Variable Importance Plot (ggplot2 for better readability)
+importance_df <- importance(model_rf) %>%
+    as.data.frame() %>%
+    rownames_to_column("Feature") %>%
+    mutate(Feature = str_trunc(Feature, width = 30)) # Truncate long names
+
+# Plot MeanDecreaseAccuracy (or MeanDecreaseGini if preferred)
+ggplot(importance_df, aes(x = reorder(Feature, MeanDecreaseAccuracy), y = MeanDecreaseAccuracy)) +
+    geom_bar(stat = "identity", fill = "steelblue") +
+    coord_flip() +
+    labs(title = "Random Forest: Feature Importance", x = "Feature", y = "Importance") +
+    theme_minimal()
+
+## ----model_comparison---------------------------------------------------------
+# Extract Metrics from Confusion Matrices
+model_metrics <- data.frame(
+    Model = c("Logistic Regression", "Decision Tree", "Random Forest", "GBM"),
+    Accuracy = c(
+        cm_logreg$overall["Accuracy"],
+        cm_tree$overall["Accuracy"],
+        cm_rf$overall["Accuracy"],
+        cm_gbm$overall["Accuracy"]
+    )
+)
+
+# Visualize Comparison
+ggplot(model_metrics, aes(x = reorder(Model, Accuracy), y = Accuracy, fill = Model)) +
+    geom_bar(stat = "identity") +
+    geom_text(aes(label = round(Accuracy, 4)), vjust = -0.5) +
+    labs(title = "Model Accuracy Comparison", x = "Model", y = "Accuracy") +
+    theme_minimal() +
+    theme(legend.position = "none")
+
+## ----overfitting_analysis-----------------------------------------------------
+# 1. Calculate Training Accuracy for all models
+# Logistic Regression
+acc_train_logreg <- confusionMatrix(predict(model_logreg, data_train), data_train$Status)$overall["Accuracy"]
+# Decision Tree
+acc_train_tree <- confusionMatrix(predict(model_tree, data_train, type = "class"), data_train$Status)$overall["Accuracy"]
+# Random Forest
+acc_train_rf <- confusionMatrix(predict(model_rf, data_train), data_train$Status)$overall["Accuracy"]
+# GBM
+pred_gbm_train_prob <- predict(model_gbm, newdata = data_train, n.trees = 100, type = "response")
+pred_gbm_train_class <- apply(pred_gbm_train_prob, 1, which.max) %>%
+    factor(levels = 1:3, labels = levels(data_train$Status))
+acc_train_gbm <- confusionMatrix(pred_gbm_train_class, data_train$Status)$overall["Accuracy"]
+
+# 2. Combine with Validation Accuracy
+overfitting_df <- data.frame(
+    Model = rep(c("Logistic Reg", "Decision Tree", "Random Forest", "GBM"), each = 2),
+    Dataset = rep(c("Training", "Validation"), 4),
+    Accuracy = c(
+        acc_train_logreg, cm_logreg$overall["Accuracy"],
+        acc_train_tree, cm_tree$overall["Accuracy"],
+        acc_train_rf, cm_rf$overall["Accuracy"],
+        acc_train_gbm, cm_gbm$overall["Accuracy"]
+    )
+)
+
+# 3. Visualize
+ggplot(overfitting_df, aes(x = Model, y = Accuracy, fill = Dataset)) +
+    geom_bar(stat = "identity", position = "dodge") +
+    geom_text(aes(label = round(Accuracy, 3)), position = position_dodge(width = 0.9), vjust = -0.5) +
+    scale_fill_manual(values = c("Training" = "steelblue", "Validation" = "orange")) +
+    labs(title = "Overfitting Check: Training vs. Validation Accuracy", y = "Accuracy") +
+    theme_minimal()
+
+## ----align_factors------------------------------------------------------------
+test_encoded <- test_eng
+
+# We use 'data_train' (the final training set) as the reference for factor levels
+factor_cols <- names(select(data_train, where(is.factor)))
+
+for (col in factor_cols) {
+    # Skip Status if it's in the list (it is the target)
+    if (col == "Status") next
+
+    if (col %in% names(test_encoded)) {
+        # 1. Get Levels from Train
+        train_levels <- levels(data_train[[col]])
+
+        # 2. Convert Test to Character
+        x <- as.character(test_encoded[[col]])
+
+        # 3. Handle Unknown Levels
+        # Identify values NOT in training levels
+        unknown_mask <- !(x %in% train_levels)
+
+        if (any(unknown_mask)) {
+            # Map to "Other" if available, else map to the first level (Mode-ish)
+            if ("Other" %in% train_levels) {
+                x[unknown_mask] <- "Other"
+            } else {
+                x[unknown_mask] <- train_levels[1]
+            }
+        }
+
+        # 4. Convert back to Factor with EXACT Train Levels
+        test_encoded[[col]] <- factor(x, levels = train_levels)
+    }
+}
+
+# Ensure no ID columns in predictors (Keep ID for output)
+test_ids <- test_encoded$Customer.ID
+test_input <- test_encoded %>% select(-Customer.ID)
+
+# Ensure columns match (excluding Status)
+# Predictors in model
+predictors <- names(data_train)[names(data_train) != "Status"]
+missing_cols <- setdiff(predictors, names(test_input))
+if (length(missing_cols) > 0) {
+    stop(paste("Missing columns in Test Data:", paste(missing_cols, collapse = ", ")))
+}
+
+## ----predict_final------------------------------------------------------------
+# Generate Predictions
+final_predictions <- predict(model_rf, newdata = test_input)
+
+# Create Output Dataframe
+submission <- data.frame(
+    Customer.ID = test_ids,
+    Predicted_Status = final_predictions
+)
+
+# Visualize Predicted Class Distribution
+ggplot(submission, aes(x = Predicted_Status, fill = Predicted_Status)) +
+    geom_bar() +
+    geom_text(stat = "count", aes(label = after_stat(count)), vjust = -0.5) +
+    labs(title = "Distribution of Predicted Customer Status", x = "Predicted Status", y = "Count") +
+    theme_minimal() +
+    theme(legend.position = "none")
+
+
+# Export to CSV
+write.csv(submission, "predictions.csv", row.names = FALSE)
+
